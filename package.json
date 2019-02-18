@@ -1,0 +1,16 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arsalan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-logger": "0.0.3",
+    "morgan": "^1.9.1"
+  }
+}
