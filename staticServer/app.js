@@ -45,6 +45,7 @@ app.use((req, res)=> {
     res.status(404).send("File Not Found");
 });
 
-app.listen(3000, ()=> {
+const port = 3000;
+app.listen(port, ()=> {
     console.log("app is running on port 3000");
 });
