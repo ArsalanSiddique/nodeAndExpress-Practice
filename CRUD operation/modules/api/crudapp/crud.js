@@ -63,6 +63,27 @@ crud.getData = function (req, res) {
     });
 }
 
+crud.getOne = function (req, res) {
+    model.find({},function (err, data1) {
+        if (err) {
+            res.send({
+                statusCode: 500,
+                message: 'Data did not selected'
+            })
+        } else {
+            var jsonData = data1;
+            jsonData.forEach(function(entry)  {
+                console.log(entry.name);
+            })
+            // for(var i = 0; i < jsonData.length; i++) {
+            //     var dataArray = jsonData[i];
+            //     console.log(dataArray.name);
+            //     console.log(dataArray.email);
+            // }
+        };
+    });
+}
+
 crud.deleteData = function (req, res) {
     var id = req.params.id;
     model.findByIdAndDelete(id,function (err, data1) {
